@@ -1,0 +1,35 @@
+{
+  "name": "@earnwithhermes/mcp-feed",
+  "version": "1.0.0",
+  "description": "MCP server for the Earn With Hermes daily feed — exposes TOON-format daily content as discoverable MCP resources for any MCP-compatible agent (Claude Desktop, Cursor, VS Code, Hermes, etc.)",
+  "type": "module",
+  "bin": {
+    "mcp-feed": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "feed",
+    "rss",
+    "toon",
+    "ai-agents",
+    "curation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taku-ops/mcp-feed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taku-ops/mcp-feed/issues"
+  },
+  "homepage": "https://earnwithhermes.com"
+}
