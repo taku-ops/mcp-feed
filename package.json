@@ -1,6 +1,6 @@
 {
   "name": "@earnwithhermes/mcp-feed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for the Earn With Hermes daily feed — exposes TOON-format daily content as discoverable MCP resources for any MCP-compatible agent (Claude Desktop, Cursor, VS Code, Hermes, etc.)",
   "type": "module",
   "bin": {
