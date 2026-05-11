@@ -1,5 +1,7 @@
 # @earnwithhermes/mcp-feed
 
+[![smithery badge](https://smithery.ai/badge/taku-ops/feed)](https://smithery.ai/servers/taku-ops/feed)
+
 MCP server for the [Earn With Hermes](https://earnwithhermes.com) daily feed — exposes TOON-format daily content as discoverable MCP resources for any MCP-compatible agent.
 
 ## Quick Start
