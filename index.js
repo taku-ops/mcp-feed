@@ -8,7 +8,8 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 
 const BASE_URL = "https://earnwithhermes.com/daily";
-const POLAR_ORG_ID = "3abf333e-7958-40f7-b309-de918efa387e";
+const POLAR_ORG_ID = "30ede7c9-9751-4d53-9a5c-0c2be8620b11";
+const CHECKOUT_URL = "https://buy.polar.sh/polar_cl_1cx4D2JF8Yrvb5V29rWdNyNEwjv74qNNT92Dk2obwLE";
 const POLAR_VALIDATE_URL = "https://api.polar.sh/v1/customer-portal/license-keys/validate";
 
 const FEED_URLS = {
@@ -76,14 +77,14 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
       throw new Error(
         "daily://feed requires a Pro license key. " +
         "Set the EWH_API_KEY environment variable, or get one at " +
-        "https://polar.sh/earnwithhermes/products",
+        CHECKOUT_URL,
       );
     }
     const valid = await validateLicenseKey(key);
     if (!valid) {
       throw new Error(
         "Invalid or expired EWH_API_KEY. Get a Pro license at " +
-        "https://polar.sh/earnwithhermes/products",
+        CHECKOUT_URL,
       );
     }
   }
