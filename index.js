@@ -13,20 +13,20 @@ const CHECKOUT_URL = "https://buy.polar.sh/polar_cl_1cx4D2JF8Yrvb5V29rWdNyNEwjv7
 const POLAR_VALIDATE_URL = "https://api.polar.sh/v1/customer-portal/license-keys/validate";
 
 const FEED_URLS = {
-  "daily://latest": `${BASE_URL}/latest.toon`,
+  "daily://latest": `${BASE_URL}/latest.json`,
   "daily://feed":   `${BASE_URL}/feed.toon`,
 };
 
 const RESOURCE_DEFS = {
   "daily://latest": {
     name: "Latest Daily Feed",
-    description: "Single most recent daily entry (~1-2 KB, latest.toon)",
-    mimeType: "text/plain",
+    description: "Single most recent daily entry (~1-2 KB, JSON format)",
+    mimeType: "application/json",
     free: true,
   },
   "daily://feed": {
     name: "Full Feed Archive",
-    description: "Complete archive of all daily entries (feed.toon) — requires EWH_API_KEY env var",
+    description: "Complete archive of all daily entries (TOON format) — requires EWH_API_KEY env var. TOON uses ~40% fewer tokens than JSON.",
     mimeType: "text/plain",
     free: false,
   },
