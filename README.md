@@ -39,6 +39,18 @@ mcp_servers:
     args: ["-y", "@earnwithhermes/mcp-feed"]
 ```
 
+**OpenClaw** (`.openclaw/config.json`):
+```json
+{
+  "mcpServers": {
+    "earnwithhermes-feed": {
+      "command": "npx",
+      "args": ["-y", "@earnwithhermes/mcp-feed"]
+    }
+  }
+}
+```
+
 **Cursor / Other MCP clients**: Same pattern — add an MCP server with command `npx -y @earnwithhermes/mcp-feed`.
 
 ## Resources
