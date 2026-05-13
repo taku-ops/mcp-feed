@@ -1,7 +1,7 @@
 {
-  "name": "@earnwithhermes/mcp-feed",
-  "version": "1.0.4",
-  "description": "MCP server for the Earn With Hermes daily feed — exposes TOON-format daily content as discoverable MCP resources for any MCP-compatible agent (Claude Desktop, Cursor, VS Code, Hermes, etc.)",
+  "name": "@autonomics/mcp-feed",
+  "version": "2.0.0",
+  "description": "MCP server for the Agent Edge daily feed — exposes TOON-format daily content as discoverable MCP resources for any MCP-compatible agent (Claude Desktop, Cursor, VS Code, Hermes, etc.)",
   "type": "module",
   "bin": {
     "mcp-feed": "index.js"
@@ -31,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/taku-ops/mcp-feed/issues"
   },
-  "homepage": "https://earnwithhermes.com"
+  "homepage": "https://autonomics.build/daily/"
 }

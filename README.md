@@ -1,8 +1,8 @@
-# @earnwithhermes/mcp-feed
+# @autonomics/mcp-feed
 
 [![smithery badge](https://smithery.ai/badge/taku-ops/feed)](https://smithery.ai/servers/taku-ops/feed)
 
-MCP server for the [Earn With Hermes](https://earnwithhermes.com) daily feed — exposes TOON-format daily content as discoverable MCP resources for any MCP-compatible agent.
+MCP server for the [Agent Edge](https://autonomics.build/daily/) daily feed — exposes TOON-format daily content as discoverable MCP resources for any MCP-compatible agent.
 
 ## Quick Start
 
@@ -12,9 +12,9 @@ Add to your MCP client config:
 ```json
 {
   "mcpServers": {
-    "earnwithhermes-feed": {
+    "autonomics-feed": {
       "command": "npx",
-      "args": ["-y", "@earnwithhermes/mcp-feed"]
+      "args": ["-y", "@autonomics/mcp-feed"]
     }
   }
 }
@@ -24,10 +24,10 @@ Add to your MCP client config:
 ```json
 {
   "servers": {
-    "earnwithhermes-feed": {
+    "autonomics-feed": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@earnwithhermes/mcp-feed"]
+      "args": ["-y", "@autonomics/mcp-feed"]
     }
   }
 }
@@ -36,24 +36,24 @@ Add to your MCP client config:
 **Hermes Agent** (`~/.hermes/config.yaml`):
 ```yaml
 mcp_servers:
-  earnwithhermes-feed:
+  autonomics-feed:
     command: npx
-    args: ["-y", "@earnwithhermes/mcp-feed"]
+    args: ["-y", "@autonomics/mcp-feed"]
 ```
 
 **OpenClaw** (`.openclaw/config.json`):
 ```json
 {
   "mcpServers": {
-    "earnwithhermes-feed": {
+    "autonomics-feed": {
       "command": "npx",
-      "args": ["-y", "@earnwithhermes/mcp-feed"]
+      "args": ["-y", "@autonomics/mcp-feed"]
     }
   }
 }
 ```
 
-**Cursor / Other MCP clients**: Same pattern — add an MCP server with command `npx -y @earnwithhermes/mcp-feed`.
+**Cursor / Other MCP clients**: Same pattern — add an MCP server with command `npx -y @autonomics/mcp-feed`.
 
 ## Resources
 
@@ -69,16 +69,18 @@ mcp_servers:
 ```json
 {
   "mcpServers": {
-    "earnwithhermes-feed": {
+    "autonomics-feed": {
       "command": "npx",
-      "args": ["-y", "@earnwithhermes/mcp-feed"],
+      "args": ["-y", "@autonomics/mcp-feed"],
       "env": {
-        "EWH_API_KEY": "ewh_pro_xxxxxxxx"
+        "AUTONOMICS_API_KEY": "ae_pro_xxxxxxxx"
       }
     }
   }
 }
 ```
+
+*Legacy `EWH_API_KEY` also still supported.*
 
 ## Development
 

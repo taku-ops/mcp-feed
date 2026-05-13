@@ -7,7 +7,12 @@ import {
   ReadResourceRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 
-const BASE_URL = "https://earnwithhermes.com/daily";
+const BASE_URL = "https://autonomics.build/daily";
+
+function getApiKey() {
+  return process.env.AUTONOMICS_API_KEY || process.env.EWH_API_KEY;
+}
+
 const POLAR_ORG_ID = "30ede7c9-9751-4d53-9a5c-0c2be8620b11";
 const CHECKOUT_URL = "https://buy.polar.sh/polar_cl_1cx4D2JF8Yrvb5V29rWdNyNEwjv74qNNT92Dk2obwLE";
 const POLAR_VALIDATE_URL = "https://api.polar.sh/v1/customer-portal/license-keys/validate";
@@ -26,7 +31,7 @@ const RESOURCE_DEFS = {
   },
   "daily://feed": {
     name: "Full Feed Archive",
-    description: "Complete archive of all daily entries (TOON format) — requires EWH_API_KEY env var. TOON uses ~40% fewer tokens than JSON.",
+    description: "Complete archive of all daily entries (TOON format) — requires AUTONOMICS_API_KEY (or legacy EWH_API_KEY) env var. TOON uses ~40% fewer tokens than JSON.",
     mimeType: "text/plain",
     free: false,
   },
@@ -48,7 +53,7 @@ async function validateLicenseKey(key) {
 }
 
 const server = new Server(
-  { name: "earnwithhermes-feed", version: "1.0.0" },
+  { name: "autonomics-feed", version: "2.0.0" },
   { capabilities: { resources: {} } },
 );
 
@@ -72,18 +77,18 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
 
   // Paid resource requires a valid license key
   if (!def.free) {
-    const key = process.env.EWH_API_KEY;
+    const key = getApiKey();
     if (!key) {
       throw new Error(
         "daily://feed requires a Pro license key. " +
-        "Set the EWH_API_KEY environment variable, or get one at " +
+        "Set the AUTONOMICS_API_KEY environment variable, or get one at " +
         CHECKOUT_URL,
       );
     }
     const valid = await validateLicenseKey(key);
     if (!valid) {
       throw new Error(
-        "Invalid or expired EWH_API_KEY. Get a Pro license at " +
+        "Invalid or expired AUTONOMICS_API_KEY. Get a Pro license at " +
         CHECKOUT_URL,
       );
     }
