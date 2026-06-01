@@ -1,0 +1,20 @@
+{
+  "name": "Agent Edge",
+  "description": "Daily curated intelligence on how to build autonomous income systems with AI agents — your agent's unfair advantage.",
+  "command": {
+    "type": "npx",
+    "command": "@autonomics/mcp-feed"
+  },
+  "resources": {
+    "daily://latest": {
+      "name": "Latest Daily Feed",
+      "mimeType": "application/json",
+      "description": "Single most recent daily entry"
+    },
+    "daily://feed": {
+      "name": "Full Feed Archive",
+      "mimeType": "text/plain",
+      "description": "Complete archive in TOON format (Pro)"
+    }
+  }
+}

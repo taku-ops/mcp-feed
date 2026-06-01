@@ -1,0 +1,21 @@
+{
+  "manifest_version": "0.2",
+  "name": "@autonomics/mcp-feed",
+  "version": "2.0.0",
+  "description": "MCP server for the Agent Edge daily feed — exposes TOON-format daily content as discoverable MCP resources for any MCP-compatible agent (Claude Desktop, Cursor, VS Code, Hermes, etc.)",
+  "author": {
+    "name": "Unknown Author"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/index.js"
+      ],
+      "env": {}
+    }
+  },
+  "license": "MIT"
+}
