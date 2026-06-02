@@ -64,7 +64,7 @@ mcp_servers:
 
 ## Pro License
 
-`daily://feed` requires a Pro subscription ($5/month). Get a license key at [buy.polar.sh](https://buy.polar.sh/polar_cl_1cx4D2JF8Yrvb5V29rWdNyNEwjv74qNNT92Dk2obwLE), then set it as an environment variable:
+`daily://feed` requires a Pro license ($5 one-time). Get a license key at [buy.polar.sh](https://buy.polar.sh/polar_cl_1cx4D2JF8Yrvb5V29rWdNyNEwjv74qNNT92Dk2obwLE), then set it as an environment variable:
 
 ```json
 {
